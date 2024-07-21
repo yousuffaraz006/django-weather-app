@@ -1,0 +1,22 @@
+{% load static %}
+
+<style>
+    .log-out{
+        font-size: 18px;
+        color: #fff;
+        margin-right: 20px;
+    }
+</style>
+
+<nav class="navbar navbar-dark bg-dark text-white">
+    <div class="m-1 p-2" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                Hello, {{ request.user.first_name }}
+            </li>
+        </ul>
+    </div>
+    <span>
+        <a href="{% url 'logoutuser' %}" class="btn btn-sm btn-warning log-out">Logout</a>
+    </span>
+</nav>
