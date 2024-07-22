@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-emsr@i4vl#jug3*u0y*6@=(fkb_wrqij2+)qhd$e=$3k@t=i04
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['yousuffarazofficial.pythonanywhere.com']
 
 
 # Application definition
@@ -121,6 +121,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+if DEBUG:
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'projectapp/static')]
+
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/images/'
 
