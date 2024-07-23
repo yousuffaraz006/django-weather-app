@@ -1,7 +1,8 @@
 var searchForm = document.querySelector('#searchForm');
 
-searchForm.addEventListener("submit", () => {
+searchForm.addEventListener("submit", (e) => {
     Searching();
+    e.preventDefault();
 });
 
 function Searching() {

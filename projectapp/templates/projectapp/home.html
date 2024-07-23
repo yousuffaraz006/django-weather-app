@@ -21,8 +21,9 @@
 <body>
   {% include 'projectapp/navbar.html' %}
   <div class="container">
-    <div id="loading">
+    <div class="text-center" id="loading">
       <img id="loading-image" src="{% static 'images/loading.jpg' %}" alt="Loading..." />
+      <div id="loading-text" class="text-center">Please wait...</div>
     </div>
     <div class="card" id="carddiv">
       <div class="search">
