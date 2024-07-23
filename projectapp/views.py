@@ -64,6 +64,8 @@ def home(request):
     if city:
         try:
             data = requests.get(url).json()
+            print(data)
+            input = city
             area = data.get('name') + ', ' + data['sys']['country']
             weather_name = data['weather'][0]['main']
             weather_icon = static(f"images/{weather_name}.jpg")
@@ -74,6 +76,7 @@ def home(request):
             data_available = True
         except Exception as e:
             print(f"Error: {e}")
+            input = city
             messages.info(request, 'City not found.')
             return redirect('home')
     else:
@@ -83,8 +86,10 @@ def home(request):
         humid = ''
         wind = ''
         desc = ''
+        input = ''
         print(city)
     context = {
+        'input': input,
         'city': area,
         'temperature': temp,
         'humidity': humid,

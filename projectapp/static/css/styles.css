@@ -85,12 +85,13 @@ body {
 }
 
 #loading-image {
+    height: 100%;
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
-    animation: rotate 300ms linear infinite; /* rotate animation */
+    animation: rotate 300ms linear infinite;
 }
 
 @keyframes rotate {

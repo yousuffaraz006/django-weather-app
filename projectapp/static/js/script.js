@@ -1,13 +1,10 @@
-function checkData() {
-    if (data == 'True') {
-        console.log('Data came')
-        document.querySelector('#weather-card').style.display = "block";
-    } else {
-        console.log('Not yet')
-    }
-}
+var searchForm = document.querySelector('#searchForm');
+
+searchForm.addEventListener("submit", () => {
+    Searching();
+});
 
 function Searching() {
     document.getElementById('loading').style.display = 'block';
-    document.getElementsByClassName("dis-inp").setAttribute("disabled", "true");
+    document.getElementById('carddiv').style.display = 'none';
 }
